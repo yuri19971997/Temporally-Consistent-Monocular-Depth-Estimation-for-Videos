@@ -6,8 +6,8 @@ This repository contains the code and presentation materials for our project on 
 
 To keep the repository lightweight, the full slide deck is hosted on Google Drive, while the project poster is available directly in this folder.
 
-* **[Project Presentation Slides](LINK_TO_YOUR_GOOGLE_DRIVE_HERE)** * *Click the link above to view the detailed slides explaining our methodology, kernel functions, and results.*
-* **[Project Poster](./presentation/NoamYuriPoster.pptx)**
+* **[Project Presentation Slides]** * *Click the link above to view the detailed slides explaining our methodology, kernel functions, and results.*
+* **[Project Poster]**
     * *A high-level overview of the architecture and temporal consistency improvements.*
 
 ## 📁 Project Structure
