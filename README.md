@@ -6,10 +6,10 @@
 
 ## 🚀 Key Features
 
-* [cite_start]**State-of-the-art Backbone:** Leverages Depth Anything V2 (ViT encoder + DPT decoder) for high-quality single-image depth maps[cite: 39, 41].
-* [cite_start]**Geometric Alignment:** Stabilizes global scale by converting depth maps into 3D point clouds and aligning them across frames[cite: 51, 52].
-* [cite_start]**Temporal Fusion:** Ensures local consistency by warping previous depth maps using **RAFT optical flow**[cite: 14, 15, 20].
-* [cite_start]**Adaptive Smoothing:** Applies stronger smoothing to background regions and weaker smoothing to dynamic foregrounds to preserve detail[cite: 17].
-* [cite_start]**Noise Robustness:** Utilizes a multi-signal reliability mask based on photometric consistency and forward–backward flow agreement[cite: 16].
+* **State-of-the-art Backbone:** Leverages Depth Anything V2 (ViT encoder + DPT decoder) for high-quality single-image depth maps[cite: 39, 41].
+* **Geometric Alignment:** Stabilizes global scale by converting depth maps into 3D point clouds and aligning them across frames[cite: 51, 52].
+* **Temporal Fusion:** Ensures local consistency by warping previous depth maps using **RAFT optical flow**[cite: 14, 15, 20].
+* **Adaptive Smoothing:** Applies stronger smoothing to background regions and weaker smoothing to dynamic foregrounds to preserve detail[cite: 17].
+* **Noise Robustness:** Utilizes a multi-signal reliability mask based on photometric consistency and forward–backward flow agreement[cite: 16].
 
 ---
