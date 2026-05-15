@@ -13,3 +13,38 @@
 * **Noise Robustness:** Utilizes a multi-signal reliability mask based on photometric consistency and forward–backward flow agreement.
 
 ---
+
+## 🛠️ Methodology
+
+### 1. Geometric Alignment
+Monocular depth predictors estimate relative depth, which results in scale changes between frames[cite: 5]. To correct this, we:
+* Identify low-motion background anchors using RAFT, YOLO, and RANSAC.
+* Compute the optimal scale, rotation, and translation ($S, R, T$) using the **Kabsch–Umeyama algorithm**.
+* Apply the resulting transformation to the full 3D point cloud to minimize Mean Squared Error (MSE) between corresponding points.
+
+### 2. Temporal Fusion
+To reduce high-frequency noise and local flicker, the pipeline:
+* Warps the previous depth map into the current frame.
+* Constructs a **Trust Map** to guard against warp invalidity and photometric inconsistency.
+* Performs morphological hole filling followed by FG/BG aware blending.
+
+---
+
+## 📊 Results
+Our stabilization pipelines significantly reduce temporal flicker and scale drift compared to naive predictions.
+* **Stability:** Fixed-pixel depth trajectories show smoother curves with reduced high-frequency noise.
+* **Consistency:** The methods enable more reliable interpretation of depth over time
+---
+
+## 💻 Tech Stack
+* **Language:** Python 
+* **Optical Flow:** RAFT (Winner of Best Paper at ECCV 2020)
+* **Geometric Alignment:** Kabsch–Umeyama Algorithm 
+* **Depth Backbone:** Depth Anything V2 
+
+---
+
+## 👥 Credits
+**Authors:** Noam Murciano and Yuri Minin  
+**Supervisor:** Dr. Meir Barzohar 
+**Institution:** Signal and Image Processing Lab (SIPL), Technion - Israel Institute of Technology 
